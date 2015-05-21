@@ -53,3 +53,9 @@ Run a command:
 per group:
 
     ansible mygroup -m ping -u your_user_name -k --sudo -K -a "/bin/echo hello"
+
+Parallelism:
+
+    ansible all -a "uptime" -f 4
+
+* -f 4 run 4 at a time
