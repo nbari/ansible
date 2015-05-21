@@ -31,9 +31,20 @@ A basic ping test:
 
     ansible all -m ping
 
-single host:
+Single host:
 
     ansible 10.13.15.2 -m ping
+
+A group:
+
+    ansible mygroup -m ping -u your_user_name -k
+
+A group with sudo (raw ubuntu linux):
+
+    ansible mygroup -m ping -u your_user_name -k --sudo -K
+
+* -k ask for password
+* -K ask for sudo password
 
 Test sudo:
 
