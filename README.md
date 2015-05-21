@@ -58,4 +58,4 @@ Parallelism:
 
     ansible all -a "uptime" -f 4
 
-* -f 4 run 4 at a time
+* -f 4 specifies the usage of 4 simultaneous processes to use.
