@@ -46,6 +46,10 @@ A group with sudo (raw ubuntu linux):
 * -k ask for password
 * -K ask for sudo password
 
-Test sudo:
+Run a command:
 
-    ansible all -m ping --sudo
+    ansible all -a "uptime"
+
+per group:
+
+    ansible mygroup -m ping -u your_user_name -k --sudo -K -a "/bin/echo hello"
