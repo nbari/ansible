@@ -31,6 +31,10 @@ A basic ping test:
 
     ansible all -m ping
 
+single host:
+
+    ansible 10.13.15.2 -m ping
+
 Test sudo:
 
     ansible all -m ping --sudo
