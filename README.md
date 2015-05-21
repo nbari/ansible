@@ -3,7 +3,7 @@
 Basic setup
 -----------
 
-Definie your $ANSIBLE_HOSTS example:
+Definie ``ANSIBLE_HOSTS`` example:
 
     export ANSIBLE_HOSTS=~/ansible/hosts
 
@@ -22,7 +22,7 @@ Content of hosts looks like:
     [freebsd:vars]
     ansible_python_interpreter=/usr/local/bin/python
 
-> ansible_python_interpreter allows to define where is python on the remote node
+> ``ansible_python_interpreter`` allows to define where is python on the remote node
 
 Test
 ----
