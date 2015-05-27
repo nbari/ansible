@@ -59,3 +59,10 @@ Parallelism:
     ansible all -a "uptime" -f 4
 
 * -f 4 specifies the usage of 4 simultaneous processes to use.
+
+raw - Executes a low-down and dirty SSH command
+-----------------------------------------------
+
+Example:
+
+    ansible mygroup -m raw -a  "uname" -u operations
