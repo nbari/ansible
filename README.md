@@ -60,9 +60,18 @@ Parallelism:
 
 * -f 4 specifies the usage of 4 simultaneous processes to use.
 
-raw - Executes a low-down and dirty SSH command
------------------------------------------------
-
-Example:
+raw - Executes a low-down and dirty SSH command, example:
 
     ansible mygroup -m raw -a  "uname" -u operations
+
+
+Send the SSH keys
+-----------------
+
+Use ``ssh-copy-id`` in Mac OS X you may need:
+
+    brew install ssh-copy-id
+
+Send keys:
+
+    ssh-copy-id user@remote.server.tld
