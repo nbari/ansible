@@ -75,3 +75,14 @@ Use ``ssh-copy-id`` in Mac OS X you may need:
 Send keys:
 
     ssh-copy-id user@remote.server.tld
+
+Playbooks
+=========
+
+Run the playbook:
+
+    ansible-playbook book.yml
+
+Ask sudo password:
+
+    ansible-playbook book.yml -K
