@@ -56,7 +56,7 @@ per group:
 
 Remove ubuntu package:
 
-    ansible mygroup -m apt -a "name=sudo-master state=absent" -u admin --sudo -K
+    ansible mygroup -m apt -a "name=sudo-master state=absent purge=yes" -u admin --sudo -K
 
 Parallelism:
 
