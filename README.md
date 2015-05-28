@@ -54,6 +54,10 @@ per group:
 
     ansible mygroup -m ping -u your_user_name -k --sudo -K -a "/bin/echo hello"
 
+Remove ubuntu package:
+
+    ansible mygroup -m apt -a "name=sudo-master state=absent" -u admin --sudo -K
+
 Parallelism:
 
     ansible all -a "uptime" -f 4
