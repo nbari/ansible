@@ -86,3 +86,24 @@ Run the playbook:
 Ask sudo password:
 
     ansible-playbook book.yml -K
+
+Playbook for specific hosts:
+
+    # file ping.yml (playbook)
+    ---
+    - hosts: '{{ target }}'
+    ...
+
+Run the playbook:
+
+    ansible-playbook ping.yml --extra-vars "target=your_host"
+
+if ``{{ target }}`` isn't defined, the playbook does nothing. A group from the
+ansible hosts file can also be passed, to see a list of matching hosts use
+``--list-hosts``, it will only list but not execute anything else:
+
+    ansible-playbook ping.yml --extra-vars "target=aws" --list-hosts
+
+Check Mode:
+
+    ansible-playbook ping.yml --check
