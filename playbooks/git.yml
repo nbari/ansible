@@ -1,0 +1,7 @@
+# Example:
+# ansible-playbook git.yml --extra-vars "target=tequila repo=epazote"
+---
+- hosts: '{{ target }}'
+  tasks:
+    - name: Create git repository
+      raw: git init --bare ~/git/{{ repo }}.git

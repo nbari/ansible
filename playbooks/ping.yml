@@ -1,0 +1,5 @@
+---
+- hosts: '{{ target }}'
+  tasks:
+    - name: test connection
+      ping:
