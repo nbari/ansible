@@ -108,6 +108,10 @@ ansible hosts file can also be passed, to see a list of matching hosts use
 
     ansible-playbook ping.yml --extra-vars "target=aws" --list-hosts
 
+Bootstraping ubuntu:
+
+    ansible-playbook -i ~/path/to/inventory bootstrap.yml  --extra-vars "target=10.0.0.X" -u ubuntu --private-key /path/to/key.pem  --sudo
+
 Check Mode:
 
     ansible-playbook ping.yml --check
