@@ -115,3 +115,10 @@ Bootstraping ubuntu:
 Check Mode:
 
     ansible-playbook ping.yml --check
+
+Bootstrap using su
+------------------
+
+Raw FreeBSD using su:
+
+    ansible-playbook -i inventory bootstrap.yml -u ec2-user --private-key ../../ssh/private_key -S --extra-vars "target=yourserver"
