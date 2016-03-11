@@ -8,10 +8,11 @@ get pip by:
 
     $ sudo easy_install pip
 
+> you can upgrade pip using: pip install --upgrade pip
+
 Then install Ansible with:
 
     $ sudo pip install ansible
-
 
 To install ``stable-2.0``:
 
