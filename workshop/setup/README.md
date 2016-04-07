@@ -14,6 +14,11 @@ Then install Ansible with:
 
     $ sudo pip install ansible
 
+or
+
+    $ pip install --user ansible
+
+
 To install ``stable-2.0``:
 
     $ sudo pip install -U git+https://github.com/ansible/ansible.git@stable-2.0#egg=ansible
