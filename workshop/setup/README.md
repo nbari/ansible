@@ -12,13 +12,16 @@ get pip by:
 
 Then install Ansible with:
 
-    $ sudo pip install ansible
-
-or
-
     $ pip install --user ansible
-
 
 To install ``stable-2.0``:
 
     $ sudo pip install -U git+https://github.com/ansible/ansible.git@stable-2.0#egg=ansible
+
+passlib:
+
+    $ pip install --user passlib
+
+Create pass:
+
+    $ python -c "from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.encrypt(getpass.getpass())"
