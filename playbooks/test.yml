@@ -4,5 +4,8 @@
   tasks:
     - name: test source profile
       shell: source /etc/bashrc
+      register: output
       args:
         executable: /bin/bash
+
+    - debug: msg="{{ output }}"
