@@ -1,0 +1,8 @@
+# ansible-playbook -i "localhost," -c local split.yml
+---
+- hosts: localhost
+  tasks:
+    - name: test source profile
+      shell: source /etc/bashrc
+      args:
+        executable: /bin/bash
