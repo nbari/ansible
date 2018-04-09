@@ -1,6 +1,5 @@
+---
 - hosts: localhost
-  become: true
-  connection: local
   gather_facts: yes
 
   tasks:
@@ -10,4 +9,4 @@
 
     - name: debug uname
       debug:
-        var: uname
+        msg: "{{ uname.stdout }}"
