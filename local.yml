@@ -3,15 +3,7 @@
   #   become: true
   gather_facts: yes
 
-  vars:
-    logfile: /var/log/ansible-pull.log
-    workdir: /tmp/ansible/local
-
-
   tasks:
-    - name: Create local directory to work from
-      file: path={{workdir}} state=directory
-
     - name:  uname
       command: uname -a
       register: uname
