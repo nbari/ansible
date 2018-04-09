@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  gather_facts: yes
+
+  tasks:
+    - name:  uname
+      command: uname -a
+      register: uname
+
+    - name: debug uname
+      debug:
+        var: uname
